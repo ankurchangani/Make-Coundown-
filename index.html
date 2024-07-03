@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Make Coundown </title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <style>
+    .con {
+      width: 100%;
+      height: 100vh;
+      background-color: azure;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="false">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="exampleModalLabel">Coundown</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="mt-5">
+              <div class="mb-3">
+                <label for="formGroupExampleInput" class="form-label">Hour</label>
+                <input type="text" class="form-control" id="hourSetTime" placeholder="Enter a Hour">
+              </div>
+              <div class="mb-3">
+                <label for="formGroupExampleInput2" class="form-label">Minute</label>
+                <input type="text" class="form-control" id="minuteSetTime" placeholder="Enter a minute">
+              </div>
+              <div class="mb-3">
+                <label for="formGroupExampleInput2" class="form-label w-25">Second</label>
+                <input type="text" class="form-control" id="secondSetTime" placeholder="Enter a second">
+              </div>
+              <div class="mb-3">
+                <label for="formGroupExampleInput2" class="form-label w-25">Days</label>
+                <input type="text" class="form-control" id="daySetTime" placeholder="Enter a Days">
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary" data-bs-dismiss="modal" onclick="return Timeset()">Send message
+            Time set</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="con">
+    <h1 class="text-center text-danger">Make Coundown</h1>
+    <div class="d-flex justify-content-center column-gap-2 mb-4 ">
+      <span id="days" class="bg-info text-white fs-3 mt-3 p-4 mx-2 rounded-circle">00</span>
+      <span id="hours" class="bg-info  text-white  fs-3 mt-3 p-4 mx-2 rounded-circle">00</span>
+      <span id="minutes" class=" bg-info  text-white  fs-3 mt-3 p-4 mx-2 rounded-circle">00</span>
+      <span id="seconds" class=" bg-info text-white  fs-3 mt-3 p-4 mx-2 rounded-circle">00</span>
+
+    </div>
+
+    <div class="d-flex ">
+      <h3 class="mx-3">Days</h3>
+      <h3 class="mx-3">Hours</h3>
+      <h3 class="mx-3">Minute</h3>
+      <h3 class="mx-3">Seconds</h3>
+    </div>
+
+
+    <div class="mt-3 ">
+      <button class="btn btn-outline-success mx-3" data-bs-toggle="modal" data-bs-target="#exampleModal"
+        data-bs-whatever="@mdo">Time-Set</button>
+      <button class="btn btn-outline-info mx-3" onclick="return Start()">Start</button>
+      <button class="btn btn-outline-warning mx-3" onclick="return Stop()">Stop</button>
+      <button class="btn btn-outline-danger mx-3" onclick="return  Reset()">Reset</button>
+    </div>
+    <!-- from-data -->
+
+
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+
+
+  <script src="js/script.js"></script>
+</body>
+
+</html>
